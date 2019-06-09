@@ -4,7 +4,7 @@ module "azure_resource_group" {
 }
 
 resource "azurerm_kubernetes_cluster" "kubernetes_cluster" {
-  name = "${lower(format("%s-kubernetes-cluster",var.app_name))}"
+  name = "kubernetes-cluster"
 
   location = "${module.azure_resource_group.location}"
   dns_prefix = "${var.kubernetes_dns_prefix}"
